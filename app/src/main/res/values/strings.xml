@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">android_app</string>
+    <string name="enter">Вход</string>
+    <string name="username">Логин:</string>
+    <string name="promt_username">Введите логин</string>
+    <string name="password">Пароль:</string>
+    <string name="promt_password">Введите пароль</string>
+    <string name="next">Далее</string>
+    <string name="sign_up">Регистрация</string>
 </resources>
