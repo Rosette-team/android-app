@@ -50,10 +50,10 @@
             android:text="@string/password"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextLogin" />
 
         <EditText
-            android:id="@+id/editTextTextPassword2"
+            android:id="@+id/editTextPassword"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="30dp"
@@ -70,18 +70,19 @@
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button"
+            android:id="@+id/button_entry"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/blue_20_round_background"
+            android:onClick="entryButtonClicked"
             android:text="@string/next"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button2"
@@ -95,10 +96,10 @@
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            app:layout_constraintTop_toBottomOf="@+id/button_entry" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress2"
+            android:id="@+id/editTextLogin"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="30dp"
