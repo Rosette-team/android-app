@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View;
 import android.widget.TextView
 import android.widget.Toast
+import android.content.Intent;
 
 
 class MainActivity : AppCompatActivity() {
@@ -22,13 +23,15 @@ class MainActivity : AppCompatActivity() {
 
         if (login == "doctor")
         {
-            setContentView(R.layout.activity_doctor)
+            val doctorIntent = Intent(this, DoctorActivity::class.java)
+            startActivity(doctorIntent)
         }
         else
         {
             if (login == "patient")
             {
-                setContentView(R.layout.activity_patient)
+                val patientIntent = Intent(this, PatientActivity::class.java)
+                startActivity(patientIntent)
             }
             else
             {
