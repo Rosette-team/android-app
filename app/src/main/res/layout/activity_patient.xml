@@ -6,13 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".PatientActivity">
 
-    <TextView
-        android:id="@+id/textView4"
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonWriteToDoctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="304dp"
-        android:text="patient"
+        android:layout_marginTop="16dp"
+        android:onClick="writeToDoctorClicked"
+        android:background="@drawable/blue_10_round_background"
+        android:textColor="@color/white"
+        android:text="@string/buttonWriteToDoctorText"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Записаться ко врачу" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
