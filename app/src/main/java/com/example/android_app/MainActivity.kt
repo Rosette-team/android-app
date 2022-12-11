@@ -1,5 +1,6 @@
 package com.example.android_app
 
+import DataSingleton
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View;
@@ -17,29 +18,27 @@ class MainActivity : AppCompatActivity() {
 
     fun entryButtonClicked(view: View) {
         var textViewLogin: TextView = findViewById<TextView>(R.id.editTextLogin)
-        login = textViewLogin.text.toString()
+        DataSingleton.SetLogin(textViewLogin.text.toString())
         var textViewPassword: TextView = findViewById<TextView>(R.id.editTextPassword)
-        password = textViewPassword.text.toString()
+        DataSingleton.SetPassword(textViewPassword.text.toString())
 
-        if (login == "doctor")
+        if (DataSingleton.GetLogin() == "doctor")
         {
             val doctorIntent = Intent(this, DoctorActivity::class.java)
             startActivity(doctorIntent)
         }
         else
         {
-            if (login == "patient")
+            if (DataSingleton.GetLogin() == "patient")
             {
                 val patientIntent = Intent(this, PatientActivity::class.java)
                 startActivity(patientIntent)
             }
             else
             {
-                val myToast = Toast.makeText(this, "Пользователь не существует", Toast.LENGTH_SHORT).show()
+                val message = Toast.makeText(this, "Пользователь не существует", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    public lateinit var login: String
-    public lateinit var password: String
 }
