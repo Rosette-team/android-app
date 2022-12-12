@@ -8,4 +8,6 @@
     <string name="next">Далее</string>
     <string name="sign_up">Регистрация</string>
     <string name="buttonWriteToDoctorText">Записаться ко врачу</string>
+    <string name="register">Регистрация</string>
+    <string name="done">Готово</string>
 </resources>
