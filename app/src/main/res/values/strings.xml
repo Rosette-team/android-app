@@ -10,4 +10,10 @@
     <string name="buttonWriteToDoctorText">Записаться ко врачу</string>
     <string name="register">Регистрация</string>
     <string name="done">Готово</string>
+    <string name="retype_password">Повторите пароль</string>
+    <string name="type_password">Введите пароль</string>
+    <string name="name">Имя</string>
+    <string name="promt_name">Введите имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="promt_surname">Введите фамилию</string>
 </resources>

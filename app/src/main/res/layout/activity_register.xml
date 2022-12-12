@@ -8,7 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="300dp"
-        android:layout_height="450dp"
+        android:layout_height="640dp"
         android:background="@drawable/white_round_20_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,13 +21,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:text="@string/password"
+            android:text="@string/retype_password"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextPassword4" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextRegisterPassword" />
 
         <EditText
-            android:id="@+id/editTextPassword4"
+            android:id="@+id/editTextRegisterPassword"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="30dp"
@@ -45,7 +45,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
         <EditText
-            android:id="@+id/editTextPassword5"
+            android:id="@+id/editTextRetypePassword"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="30dp"
@@ -53,7 +53,7 @@
             android:layout_marginEnd="30dp"
             android:background="@drawable/gray_5_round_background"
             android:ems="10"
-            android:hint="@string/promt_password"
+            android:hint="@string/retype_password"
             android:inputType="textPassword"
             android:paddingLeft="10dp"
             android:textSize="24sp"
@@ -71,10 +71,32 @@
             android:text="@string/username"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextRegisterSurname" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/name"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/surname"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextRegisterName" />
+
         <EditText
-            android:id="@+id/editTextLogin4"
+            android:id="@+id/editTextRegisterLogin"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="30dp"
@@ -91,6 +113,42 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
+        <EditText
+            android:id="@+id/editTextRegisterName"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/gray_5_round_background"
+            android:ems="10"
+            android:hint="@string/promt_name"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <EditText
+            android:id="@+id/editTextRegisterSurname"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/gray_5_round_background"
+            android:ems="10"
+            android:hint="@string/promt_surname"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
@@ -100,23 +158,23 @@
             android:text="@string/password"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextLogin4" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextRegisterLogin" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_entry4"
+            android:id="@+id/button_reg_done"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/blue_20_round_background"
-            android:onClick="entryButtonClicked"
+            android:onClick="regDoneButtonClicked"
             android:text="@string/done"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.472"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextPassword5" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextRetypePassword" />
 
         <TextView
             android:id="@+id/textView6"
@@ -133,4 +191,5 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,13 +30,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun entryButtonClicked(view: View) {
-        var textViewLogin: TextView = findViewById<TextView>(R.id.editTextLogin)
+        val textViewLogin: TextView = findViewById<TextView>(R.id.editTextLogin)
         DataSingleton.SetLogin(textViewLogin.text.toString())
         CurrentUser.username = textViewLogin.text.toString()
-        var textViewPassword: TextView = findViewById<TextView>(R.id.editTextPassword)
+        val textViewPassword: TextView = findViewById<TextView>(R.id.editTextPassword)
         DataSingleton.SetPassword(textViewPassword.text.toString())
         CurrentUser.password = textViewPassword.text.toString()
-
 
         if (DataSingleton.GetLogin() == "doctor")
         {
@@ -81,7 +80,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun buttonRegisterClicked(view: View) {
+    fun registerButtonClicked(view: View) {
         val registerIntent = Intent(this, RegisterActivity::class.java)
         startActivity(registerIntent)
     }
