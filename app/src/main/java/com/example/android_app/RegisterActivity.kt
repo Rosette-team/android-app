@@ -45,7 +45,6 @@ class RegisterActivity : AppCompatActivity()  {
                     Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
                 },
                 Response.ErrorListener { error ->
-                    findViewById<TextView>(R.id.debugTextView).text = error.toString()
                     Toast.makeText(this, "Error: ${error}", Toast.LENGTH_SHORT).show()
                 }) {
                 override fun getBodyContentType(): String {
