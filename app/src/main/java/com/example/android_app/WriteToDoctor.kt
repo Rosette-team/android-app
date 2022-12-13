@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -31,6 +32,10 @@ class WriteToDoctor : AppCompatActivity() {
         var spinnerDoctorFIO: Spinner = findViewById<Spinner>(R.id.spinnerDoctorFIO)
         spinnerDoctorFIO.adapter = adapterDoctorFIO
 
+    }
+
+    fun buttonWriteClicked(view: View) {
+        Toast.makeText(this, "Успешно записано", Toast.LENGTH_SHORT).show()
     }
 
 }
