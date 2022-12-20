@@ -27,7 +27,12 @@ class MyTimetableFragment : Fragment() {
         _binding = FragmentMyTimetableBinding.inflate(inflater, container, false)
         var textView = TextView(this.context)
         textView.text = "Hello World!"
-        binding.timetableLayout.addView(textView)
+        val appointmentView1: View = inflater.inflate(R.layout.doctor_appointment, null)
+        appointmentView1.findViewById<TextView>(R.id.appointmentPatientFullName).text = "Dude"
+        val appointmentView2: View = inflater.inflate(R.layout.doctor_appointment, null)
+        binding.timetableLayout.addView(appointmentView1)
+        binding.timetableLayout.addView(appointmentView2)
+        // binding.timetableLayout.addView(textView)
 
         return binding.root
     }
