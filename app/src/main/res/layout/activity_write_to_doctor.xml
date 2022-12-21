@@ -29,27 +29,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerClinic" />
 
-    <Spinner
-        android:id="@+id/spinnerDoctorFIO"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerDoctorCategory" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonWrite"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue_10_round_background"
         android:onClick="buttonWriteClicked"
         android:text="Записаться"
         android:textColor="@color/white"
-        android:background="@drawable/blue_10_round_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerDoctorFIO" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextAppointmentTime" />
+
+    <EditText
+        android:id="@+id/editTextAppointmentDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerDoctorCategory" />
+
+    <EditText
+        android:id="@+id/editTextAppointmentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAppointmentDate" />
 </androidx.constraintlayout.widget.ConstraintLayout>
